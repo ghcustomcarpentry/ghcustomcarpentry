@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Hope Custom Carpentry & Landscape Design — East Texas</title>
+<meta name="description" content="Custom carpentry, landscaping, and construction services across East Texas. Built from the heart. Based in Winnsboro, TX.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --dark3: #222222;
+  --white: #FFFFFF;
+  --off-white: #F0EDE8;
+  --cream: #E8E3DA;
+  --gray: #888888;
+  --gray-light: #CCCCCC;
+  --border: rgba(255,255,255,0.08);
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* NOISE TEXTURE OVERLAY */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  filter: invert(1);
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.nav-logo-sub {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--gray);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.nav-cta {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  padding: 10px 22px !important;
+  border-radius: 2px !important;
+  font-weight: 700 !important;
+}
+
+.nav-cta:hover { background: var(--cream) !important; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 1.5px;
+  background: var(--white);
+}
+
+.mob-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 498;
+  padding: 110px 40px 40px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mob-menu.open { display: flex; }
+
+.mob-menu a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.mob-menu a:hover { opacity: 1; }
+.mob-close { position: absolute; top: 24px; right: 32px; font-size: 28px; color: var(--gray); cursor: pointer; background: none; border: none; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.hero-bg-photo {
+  position: absolute;
+  inset: 0;
+  background: url('IMG_0349.jpeg') center center / cover no-repeat;
+  opacity: 0.25;
+  filter: grayscale(30%);
+}
+
+.hero-lines {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.5) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.hero-eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--white);
+  opacity: 0.4;
+}
+
+.hero-eyebrow-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: var(--white);
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--off-white);
+  opacity: 0.5;
+}
+
+.hero h1 .outline {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  color: transparent;
+}
+
+.hero-sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover { background: var(--cream); transform: translateY(-2px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover { border-color: rgba(255,255,255,0.6); }
+
+.hero-verse {
+  position: absolute;
+  bottom: 48px;
+  right: 48px;
+  text-align: right;
+  animation: fadeUp 0.8s 0.5s ease both;
+}
+
+.hero-verse-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(255,255,255,0.2);
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.hero-verse-ref {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+  margin-top: 6px;
+}
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--dark2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 48px;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* SECTION BASE */
+section { padding: 120px 0; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background: var(--gray);
+}
+
+.section-eyebrow-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.section-title em {
+  font-style: italic;
+  opacity: 0.4;
+}
+
+.section-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+/* SERVICES */
+#services { background: var(--dark); }
+
+.services-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+@media (max-width: 768px) {
+  .services-header { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
+}
+
+.services-header-right {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.8;
+  font-weight: 300;
+  border-left: 1px solid var(--border);
+  padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+  .services-header-right { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 32px; }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+
+.service-item {
+  background: var(--dark);
+  padding: 32px 28px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.service-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--white);
+  transition: width 0.4s ease;
+}
+
+.service-item:hover { background: var(--dark2); }
+.service-item:hover::after { width: 100%; }
+
+.service-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.15);
+  margin-bottom: 16px;
+}
+
+.service-icon { display: none; }
+
+.service-item h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.service-item p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ABOUT */
+#about { background: var(--black); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.about-logo-display {
+  position: relative;
+}
+
+.about-logo-bg {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-logo-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+}
+
+.about-logo-bg img {
+  width: 220px;
+  height: auto;
+  filter: invert(1);
+  position: relative;
+  z-index: 2;
+}
+
+.about-verse-card {
+  margin-top: 16px;
+  background: var(--dark3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px 28px;
+}
+
+.about-verse-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.about-verse-card span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.highlight-item:last-child { border-bottom: none; }
+
+.highlight-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.2);
+  width: 28px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.highlight-item h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.highlight-item p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* GALLERY PLACEHOLDER */
+#gallery { background: var(--dark); }
+
+.gallery-placeholder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 280px 280px;
+  gap: 2px;
+  margin-top: 64px;
+}
+
+@media (max-width: 768px) {
+  .gallery-placeholder { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .gallery-placeholder > *:first-child { grid-column: 1 / 3; height: 240px; }
+  .gallery-placeholder > *:not(:first-child) { height: 180px; }
+}
+
+.gallery-slot {
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.gallery-slot:first-child { grid-column: 1 / 3; }
+
+.gallery-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery-slot:hover img { transform: scale(1.04); }
+
+.gallery-slot-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-slot-placeholder span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+}
+
+/* CTA BAND */
+.cta-band {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.cta-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-band h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.cta-band h2 em { font-style: italic; opacity: 0.4; }
+
+.btn-dark {
+  background: var(--black);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-dark:hover { background: var(--dark2); transform: translateY(-2px); }
+
+/* CONTACT */
+#contact { background: var(--black); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  margin-top: 64px;
+  align-items: start;
+}
+
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.contact-info { display: flex; flex-direction: column; gap: 0; }
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-item:first-child { padding-top: 0; }
+
+.contact-item-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 4px;
+}
+
+.contact-item-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.contact-item-value:hover { color: var(--gray-light); }
+
+/* FORM */
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+
+.form-field label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white);
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  appearance: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(255,255,255,0.2); }
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { border-color: rgba(255,255,255,0.4); }
+
+.form-field textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+.form-field select option { background: var(--dark2); }
+
+.form-submit {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 2px;
+  padding: 16px 32px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 4px;
+}
+
+.form-submit:hover { background: var(--cream); }
+
+.form-success { display: none; padding: 24px; background: var(--dark2); border: 1px solid var(--border); border-radius: 2px; }
+.form-success.show { display: block; }
+.form-success p { font-size: 14px; color: var(--gray-light); }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  padding: 56px 0 28px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.footer-logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer-logo-sub {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.footer-verse {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.2);
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.footer-links h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 16px;
+}
+
+.footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+.footer-links ul li a {
+  font-size: 14px;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links ul li a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-bottom span { font-size: 12px; color: rgba(255,255,255,0.15); }
+.footer-bottom a { color: rgba(255,255,255,0.25); text-decoration: none; }
+.footer-bottom a:hover { color: var(--gray); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+.sr { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.sr.v { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+
+/* MOBILE */
+@media (max-width: 960px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .burger { display: flex; }
+  .hero-content { padding: 60px 20px; }
+  .hero-verse { display: none; }
+  .stats-bar { padding: 20px; }
+  .stats-inner { justify-content: center; gap: 16px; }
+  .stat-divider { display: none; }
+  section { padding: 80px 0; }
+  .container { padding: 0 20px; }
+  .cta-band-inner { padding: 0 20px; flex-direction: column; }
+  footer { padding: 40px 0 20px; }
+  .footer-inner { padding: 0 20px; }
+  .footer-top { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="logo.png" alt="Good Hope" class="nav-logo-img" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Good Hope</div>
+      <div class="nav-logo-sub">Custom Carpentry & Landscape</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Free Estimate</a></li>
+  </ul>
+  <div class="burger" onclick="openMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMenu()">✕</button>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#contact" onclick="closeMenu()">Free Estimate</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-photo"></div>
+  <div class="hero-lines"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Winnsboro, TX · Serving All of East Texas</span>
+    </div>
+    <h1>Built<br><em>from</em><br><span class="outline">the heart.</span></h1>
+    <p class="hero-sub">Handcrafted carpentry, custom builds, and landscape design across East Texas. From custom staircases and cedar interiors to full outdoor living spaces — every detail built with purpose.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">
+        Get a Free Estimate
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+  </div>
+
+  <div class="hero-verse">
+    <div class="hero-verse-text">"Whatever you do, do it from the heart, as something done for the LORD and not for people."</div>
+    <div class="hero-verse-ref">Colossians 3:23 · CSB</div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div>
+        <div class="stat-num">East TX</div>
+        <div class="stat-label">Based & Serving</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div>
+        <div class="stat-num">Free</div>
+        <div class="stat-label">Estimates Always</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div>
+        <div class="stat-num">LLC</div>
+        <div class="stat-label">Licensed & Insured</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div>
+        <div class="stat-num">Custom</div>
+        <div class="stat-label">Every Single Project</div>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div>
+        <div class="stat-num">Col. 3:23</div>
+        <div class="stat-label">Our Standard</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="sr">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div>
+          <span class="section-eyebrow-text">What We Do</span>
+        </div>
+        <h2 class="section-title">Every project,<br><em>done right.</em></h2>
+      </div>
+      <div class="services-header-right sr d1">
+        From custom cabinets and built-ins to full landscape design and outdoor living spaces — Good Hope handles it all. One crew, one standard of work, every time.
+      </div>
+    </div>
+
+    <div class="services-grid sr">
+      <div class="service-item">
+        
+        
+        <h3>Custom Carpentry</h3>
+        <p>Cabinets, shelving, built-ins, trim work, molding, baseboards — custom built to your specs.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Framing & Construction</h3>
+        <p>Framing, siding, walls, ceilings, doors, windows — structural work done the right way.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Kitchens & Bathrooms</h3>
+        <p>Full kitchen and bathroom remodels — from demo to finish, we handle it all.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Remodels & Repairs</h3>
+        <p>Additions, remodels, repairs — whatever your home needs, we get it done.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Landscape Design</h3>
+        <p>Landscaping and gardens designed and built to transform your outdoor space.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Outdoor Living</h3>
+        <p>Porches, patios, pergolas, outdoor kitchens and living areas — built to last.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Flooring & Steps</h3>
+        <p>Hardwood, tile, laminate, custom steps — every surface finished with care.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Tiny Homes & Add-ons</h3>
+        <p>Tiny homes, guest houses, add-ons, and room additions built from the ground up.</p>
+      </div>
+      <div class="service-item">
+        
+        
+        <h3>Fences, Sheds & More</h3>
+        <p>Fences, sheds, garages, carports, RV covers, spa covers — and much more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--dark);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="sr">
+        <div class="about-logo-display">
+          <div class="about-logo-bg">
+            <img src="logo.png" alt="Good Hope Custom Carpentry" onerror="this.outerHTML='<div style=\'font-family:Barlow Condensed,sans-serif;font-size:48px;font-weight:900;color:white;letter-spacing:0.05em;\'>GH</div>'">
+          </div>
+          <div class="about-verse-card">
+            <p>"Whatever you do, do it from the heart, as something done for the LORD and not for people."</p>
+            <span>Colossians 3:23 · CSB</span>
+          </div>
+        </div>
+      </div>
+      <div class="sr d1">
+        <div class="section-eyebrow">
+          <div class="section-eyebrow-line"></div>
+          <span class="section-eyebrow-text">About Good Hope</span>
+        </div>
+        <h2 class="section-title">Built on faith.<br><em>Proven by work.</em></h2>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;font-weight:300;">Good Hope Custom Carpentry and Landscape Design is a faith-based construction and landscape company based in Winnsboro, TX. We serve homeowners and property owners across all of East Texas — bringing quality craftsmanship and honest work to every single project.</p>
+        <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;font-weight:300;">We're a licensed LLC and we stand behind everything we build. From custom cabinets to full landscape transformations — the standard never changes.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-num">01</div>
+            <div>
+              <h4>Licensed LLC</h4>
+              <p>Fully licensed and insured — you're protected on every project.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-num">02</div>
+            <div>
+              <h4>Based in Winnsboro, TX</h4>
+              <p>Serving all of East Texas — we come to you.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-num">03</div>
+            <div>
+              <h4>Faith-Driven Work</h4>
+              <p>Every project is done to the highest standard — because that's the standard we hold ourselves to.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-num">04</div>
+            <div>
+              <h4>Free Estimates</h4>
+              <p>Call or text anytime. No pressure, no obligation — just an honest quote.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:var(--black);">
+  <div class="container">
+    <div class="sr">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">Our Work</span>
+      </div>
+      <h2 class="section-title">The work<br><em>speaks for itself.</em></h2>
+      <p class="section-sub">Real projects, real craftsmanship. Every photo is work we've done right here in East Texas.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;gap:3px;margin-top:64px;" class="sr d1">
+
+      <!-- Row 1 - large featured -->
+      <div style="grid-column:1/3;height:380px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0349.jpeg" alt="Custom porch ramp with sunburst railing" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 50%);"></div>
+        <div style="position:absolute;bottom:20px;left:24px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;">Custom Carpentry</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;">Sunburst Porch Ramp & Railing</div>
+        </div>
+      </div>
+
+      <div style="height:380px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_1161.jpeg" alt="Custom rafter tails detail" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 50%);"></div>
+        <div style="position:absolute;bottom:20px;left:24px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;">Custom Detail Work</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;">Custom Rafter Tails</div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div style="height:280px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="2093723865139863696.jpeg" alt="Custom outbuilding exterior" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Custom Outbuilding</div>
+      </div>
+
+      <div style="height:280px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0878.jpeg" alt="Outdoor pavilion build" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Outdoor Pavilion</div>
+      </div>
+
+      <div style="height:280px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0939.jpeg" alt="Pavilion construction" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Pavilion Build</div>
+      </div>
+
+      <!-- Row 3 - interior work -->
+      <div style="grid-column:1/3;height:340px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0960.jpeg" alt="Full interior cedar renovation" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 50%);"></div>
+        <div style="position:absolute;bottom:20px;left:24px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:4px;">Interior Renovation</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:white;letter-spacing:0.04em;">Full Cedar Interior — Walls, Ceiling & Flooring</div>
+        </div>
+      </div>
+
+      <div style="height:340px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0959.jpeg" alt="Cedar walls and ceiling interior" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Cedar Interior Build</div>
+      </div>
+
+      <!-- Row 4 - landscape -->
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0019.jpeg" alt="Custom garden enclosure" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Garden Enclosure</div>
+      </div>
+
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0004.jpeg" alt="Custom garden structure" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Landscape Design</div>
+      </div>
+
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_1405.jpeg" alt="Custom hot tub surround" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Outdoor Living</div>
+      </div>
+
+      <!-- Row 5 - stairs and steps -->
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_4350.jpeg" alt="Custom staircase build" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Custom Staircase</div>
+      </div>
+
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_1128.jpeg" alt="Custom entry steps" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Entry Steps & Landing</div>
+      </div>
+
+      <div style="height:300px;overflow:hidden;position:relative;cursor:pointer;">
+        <img src="IMG_0965.jpeg" alt="Completed interior flooring" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:16px;left:20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:white;">Flooring Installation</div>
+      </div>
+
+    </div>
+
+    <!-- Hover effect script -->
+    <style>
+      .gallery-slot img:hover, div[style*="overflow:hidden"] img:hover { transform: scale(1.04); }
+    </style>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Ready to start<br><em>your project?</em></h2>
+    </div>
+    <a href="tel:9033122783" class="btn-dark">
+      📞 (903) 312-2783
+    </a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sr">
+      <div class="section-eyebrow">
+        <div class="section-eyebrow-line"></div>
+        <span class="section-eyebrow-text">Get In Touch</span>
+      </div>
+      <h2 class="section-title">Let's build<br><em>something.</em></h2>
+      <p class="section-sub">Fill out the form or give us a call. We'll get back to you fast with a free estimate.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info sr">
+        <div class="contact-item">
+          <div>
+            <div class="contact-item-label">Phone / Text</div>
+            <a href="tel:9033122783" class="contact-item-value">(903) 312-2783</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div>
+            <div class="contact-item-label">Email</div>
+            <a href="mailto:ghcustomcarpentry@icloud.com" class="contact-item-value">ghcustomcarpentry@icloud.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div>
+            <div class="contact-item-label">Based In</div>
+            <span class="contact-item-value">Winnsboro, TX</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div>
+            <div class="contact-item-label">Service Area</div>
+            <span class="contact-item-value">All of East Texas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr d1">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvzlzlqg" method="POST">
+          <input type="hidden" name="client_site" value="Good Hope Custom Carpentry">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-field">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(903) 000-0000">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@email.com">
+          </div>
+          <div class="form-field">
+            <label>Service Needed</label>
+            <select name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option>Custom Carpentry / Cabinets</option>
+              <option>Framing & Construction</option>
+              <option>Kitchen or Bathroom Remodel</option>
+              <option>Remodel or Repair</option>
+              <option>Landscape Design</option>
+              <option>Outdoor Living / Patio / Pergola</option>
+              <option>Flooring</option>
+              <option>Tiny Home or Add-on</option>
+              <option>Fence / Shed / Garage</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Tell Us About Your Project</label>
+            <textarea name="message" placeholder="Describe your project — location, size, timeline, anything that helps us understand what you need..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <p>Message received — we'll be in touch soon with your free estimate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-name">Good Hope Carpentry</div>
+        <div class="footer-logo-sub">Custom Carpentry & Landscape Design · Winnsboro, TX</div>
+        <div class="footer-verse">"Whatever you do, do it from the heart." — Col. 3:23</div>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Custom Carpentry</a></li>
+          <li><a href="#services">Landscape Design</a></li>
+          <li><a href="#services">Outdoor Living</a></li>
+          <li><a href="#services">Remodels & Repairs</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9033122783">(903) 312-2783</a></li>
+          <li><a href="mailto:ghcustomcarpentry@icloud.com">ghcustomcarpentry@icloud.com</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Good Hope Custom Carpentry & Landscape Design · Winnsboro, TX</span>
+      <span>Site by <a href="https://launchlocaltx.com" target="_blank">Launch Local TX</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function openMenu() { document.getElementById('mobMenu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMenu() { document.getElementById('mobMenu').classList.remove('open'); document.body.style.overflow = ''; }
+
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('v'); obs.unobserve(x.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.sr').forEach(el => obs.observe(el));
+
+const form = document.getElementById('contactForm');
+const success = document.getElementById('formSuccess');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) { form.style.display = 'none'; success.classList.add('show'); }
+    else { btn.textContent = 'Something went wrong — try again'; btn.disabled = false; }
+  } catch { btn.textContent = 'Something went wrong — try again'; btn.disabled = false; }
+});
+</script>
+
+</body>
+</html>
